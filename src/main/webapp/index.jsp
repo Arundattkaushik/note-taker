@@ -1,16 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="com.notes.entities.Note"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<%@include file="bootstrap.jsp" %>
+<%@include file="bootstrap.jsp"%>
 <title>Home</title>
+
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Hello</h1>
-<form action="Hello", method="post">
-<input type="text" name="name">
-<button type="submit">Add</button>
-</form>
+	<div >
+		<%@include file="navbar.jsp"%>
+	</div>
+	<h1>Welcome Home</h1>
+	
 </body>
 </html>
