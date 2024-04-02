@@ -6,10 +6,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Quick Notes: View Note</title>
+<title>Quick Notes: Edit Note</title>
 <link rel="stylesheet" href="css/style.css">
 <%@include file="bootstrap.jsp"%>
 <%@include file="navbar.jsp"%>
+
 <% int noteId = Integer.parseInt(request.getParameter("note_id"));
        Note note = NotesService.getNote(noteId);
 %>
@@ -22,11 +23,14 @@
 			<div class="mb-3">
 
 				<label class="form-label pt-4">Title</label> 
-				<input type="text" class="form-control" name="noteTitle" required="required" value="<%=note.getTitle() %>" disabled="disabled"> 
+				<input type="text" class="form-control" name="noteTitle" required="required" value="<%=note.getTitle() %>"> 
 
 				<div class="mb-3">
 					<label class="form-label pt-4">Note</label>
-					<textarea rows="15" cols="" class="form-control" name="noteContent" disabled="disabled"><%=note.getContent() %></textarea>
+					<textarea rows="15" cols="" class="form-control" name="noteContent"><%=note.getContent() %></textarea>
+				</div>
+				<div class="row justify-content-end pr-3">
+					<button type="submit" class="btn btn-primary">Update Note</button>
 				</div>
 			</div>
 		</form>

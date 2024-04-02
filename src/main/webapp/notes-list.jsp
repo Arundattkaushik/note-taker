@@ -31,7 +31,7 @@
 				</div>
 				<div class="col-md-8">
 					<div class="card-body">
-						<h5 class="card-title"><a href="note-details.jsp"><%=note.getTitle() %></a> </h5>
+						<h5 class="card-title"><a href="note-details.jsp?note_id=<%=note.getId() %>"><%=note.getTitle() %></a> </h5>
 						
 						<!-- Applied ellipse -->
 						<span class="d-inline-block text-truncate" style="max-width: 280px;">
@@ -42,7 +42,7 @@
 						<small class="text-body-secondary">Created on <%=note.getCreateDate() %></small>
 						</p>
 						<a class="btn btn-danger" href="DeleteController?note_id=<%=note.getId() %>" >Delete</a>
-						<a class="btn btn-primary ml-1">Edit</a>
+						<a class="btn btn-primary ml-1" href="edit-note.jsp?note_id=<%=note.getId()%>">Edit</a>
 					</div>
 				</div>
 			</div>

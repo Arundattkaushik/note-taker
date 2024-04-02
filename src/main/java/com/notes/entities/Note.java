@@ -30,6 +30,10 @@ public class Note {
 	public int getId() {
 		return id;
 	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getTitle() {
 		return title;
@@ -55,6 +59,4 @@ public class Note {
 		this.createDate = new Date();
 		this.id = new Random().nextInt(10000);
 	}
-
-	
 }

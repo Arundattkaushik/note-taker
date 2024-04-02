@@ -11,6 +11,7 @@ public class NotesService {
 	static Dao dao = new NotesDao();
 	static int id;
 	static Boolean isDeleted = false;
+	static Boolean isUpdate = false;
 
 	public static int saveNote(Note note) {
 		try {
@@ -37,5 +38,12 @@ public class NotesService {
 	public static Note getNote(int id) {
 		Note note = dao.getNote(id);
 		return note;
+	}
+	
+	public static Boolean updateNote(Note note) {
+		isUpdate = false;
+		dao.update(note);
+		isUpdate = true;
+		return isUpdate;
 	}
 }
