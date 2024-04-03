@@ -11,10 +11,22 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div >
-		<%@include file="navbar.jsp"%>
+<%@include file="navbar.jsp"%>
+
+<!-- Adding card -->
+<div class="card container mt-4" style="width: 38rem;">
+
+	<div class="container text-center pr-5">
+  <img src="img/sticky-notes.png" class="card-img-top " style="max-width: 300px;">	
 	</div>
-	<h1>Welcome Home</h1>
+  <div class="card-body">
+    <h5 class="card-title text-uppercase text-center">Take A Note</h5>
+    <div class="container text-center">
+    <a href="add-notes.jsp" class="btn btn-primary">Add</a>    
+    </div>
+  </div>
+</div>
+
 	
 </body>
 </html>

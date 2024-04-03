@@ -24,6 +24,7 @@ public class NotesDao implements Dao {
 	@Override
 	public Boolean update(Note note) {
 		isUpdated = false;
+		Utils.getSession().clear();
 		Utils.getSession().update(note);
 		Utils.getSession().getTransaction().begin();
 		Utils.getSession().getTransaction().commit();
